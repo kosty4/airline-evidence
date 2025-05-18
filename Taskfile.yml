@@ -1,0 +1,7 @@
+version: "3"
+
+tasks:
+  dump-data:
+    cmds:
+      - docker exec -t airlines pg_dump -U admin -d airlines | gzip > db_dump.sql.gz
+    desc: "Dump the database to a compressed file"

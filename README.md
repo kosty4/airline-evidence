@@ -19,15 +19,27 @@ The easiest way to get started is using the [VS Code Extension](https://marketpl
 
 **Note:** Codespaces is much faster on the Desktop app. After the Codespace has booted, select the hamburger menu → Open in VS Code Desktop.
 
+## Getting Started 
 
-## Getting Started from Terminal
+### Run Postgres container and load data
+
+```bash
+chmod +x init/restore.sh
+
+docker-compose up --build
+```
+
+### Run Evidence Development Server
 
 ```bash
 npm install
 npm run sources
 npm run dev
 ```
+Then open [localhost:3000](http://localhost:3000) in your browser.
+
 Note: it might take up to 30 mins to run npm install!
+
 
 ## Dataset
 

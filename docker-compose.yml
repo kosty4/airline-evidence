@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15.0
+    container_name: airlines
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: airlines
+    volumes:
+        # Mount the folder and container volume
+        # When the container starts, it will execute the scripts in this directory, in alphabetical order.
+      - ./init:/docker-entrypoint-initdb.d 
+    ports:
+      - "5432:5432"
