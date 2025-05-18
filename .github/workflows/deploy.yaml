@@ -23,10 +23,10 @@ jobs:
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
           ## Add and uncomment any environment variables here
-          EVIDENCE_SOURCE__airlines__host: ${{ secrets.EVIDENCE_SOURCE__airlines__host }}
-          EVIDENCE_SOURCE__airlines__port: ${{ secrets.EVIDENCE_SOURCE__airlines__port }}
-          EVIDENCE_SOURCE__airlines__database: ${{ secrets.EVIDENCE_SOURCE__airlines__database }}
-          EVIDENCE_SOURCE__airlines__user: ${{ secrets.EVIDENCE_SOURCE__airlines__user }}
+          EVIDENCE_SOURCE__airlines__host: ${{ vars.EVIDENCE_SOURCE__airlines__host }}
+          EVIDENCE_SOURCE__airlines__port: ${{ vars.EVIDENCE_SOURCE__airlines__port }}
+          EVIDENCE_SOURCE__airlines__database: ${{ vars.EVIDENCE_SOURCE__airlines__database }}
+          EVIDENCE_SOURCE__airlines__user: ${{ vars.EVIDENCE_SOURCE__airlines__user }}
           EVIDENCE_SOURCE__airlines__password: ${{ secrets.EVIDENCE_SOURCE__airlines__password }}
           
           
