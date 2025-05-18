@@ -7,6 +7,8 @@ We want to answer questions with data such as:
 - What airline/airport has the most amount of flights?
 - What airline/airport has the most amount of cancellations?
 
+Make sure to check the [Demo](https://kosty4.github.io/airline-evidence/airlines/) !
+
 ![Airports page](/figures/airports-show.png)
 
 ![Airlines page](/figures/airlines-show.png)
