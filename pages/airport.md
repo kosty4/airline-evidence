@@ -57,13 +57,13 @@ LIMIT 10
     y=total_amount_of_incoming_flights
 />
 
-
+## Which airport had the most amout of flights cancelled?
 
 ```sql airport_most_cancellations
 
 SELECT 
 airport_name, 
-SUM(arr_cancelled) / SUM(arr_flights) *100 as total_amount_of_fligths_cancelled
+SUM(arr_cancelled) as total_amount_of_fligths_cancelled
 
 FROM airlines
 
@@ -71,12 +71,34 @@ GROUP BY airport_name
 ORDER BY total_amount_of_fligths_cancelled DESC
 
 LIMIT 10
+
 ```
 
 <BarChart
     data={airport_most_cancellations}
-    title="Airports with the most amount of cancellations in percentage to arrival flights"
+    title="Airports with the most amount of cancellations in total"
     x=airport_name
     y=total_amount_of_fligths_cancelled
+/>
+
+```sql airport_most_cancelations_percentage
+
+SELECT 
+airport_name, 
+SUM(arr_cancelled) / SUM(arr_flights) *100 as cancelled_flights_percentage
+
+FROM airlines
+
+GROUP BY airport_name
+ORDER BY cancelled_flights_percentage DESC
+
+LIMIT 10
+```
+
+<BarChart
+    data={airport_most_cancelations_percentage}
+    title="Airports with the most amount of cancellations in percentage to arrival flights"
+    x=airport_name
+    y=cancelled_flights_percentage
 />
 
