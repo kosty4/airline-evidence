@@ -2,6 +2,9 @@ appearance:
   default: system
   switcher: true
 
+deployment:
+  basePath: /airline-evidence
+
 theme:
   colorPalettes:
     default:
